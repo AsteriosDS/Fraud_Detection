@@ -17,9 +17,8 @@ def main():
     st.title("Fraud Detection Autoencoder")
     st.write("Explore time series data and classify them using the autoencoder model.")
 
-    # Load test set time series data (replace with your own data)
-    test_data = pd.read_csv("test_data.csv")
-    samples = test_data.sample(n=500, random_state=42)
+    # Load test set time series data
+    test_data = pd.read_csv(path + "/val_st.csv")
 
     # Display micrographs of time series data
     st.subheader("Micrographs of Time Series")
