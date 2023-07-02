@@ -9,8 +9,8 @@ import matplotlib.pyplot as plt
 path = os.path.dirname(__file__)
 
 # Load the saved autoencoder model
-model = load_model(path + "/autoencoder_model.h5")
-model.load_weights(path + "/autoencoder_weights.h5")
+model = load_model(path + "/autoencoder.h5")
+model.load_weights(path + "/auto_weights.h5")
 
 # Streamlit app
 def main():
