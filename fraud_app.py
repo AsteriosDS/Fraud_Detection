@@ -4,6 +4,7 @@ import pandas as pd
 import os
 from tensorflow.keras.models import load_model
 import matplotlib.pyplot as plt
+from sklearn.utils import shuffle
 
 # define path
 path = os.path.dirname(__file__)
@@ -14,6 +15,7 @@ model.load_weights(path + "/auto_weights.h5")
 
 # Load test set time series data
 test_data = pd.read_csv(path + "/val_st.csv")
+test_data = shuffle(test_data).reset_index(drop=True)
 
 # Streamlit app
 def main():
