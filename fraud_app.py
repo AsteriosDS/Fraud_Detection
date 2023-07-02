@@ -82,7 +82,7 @@ def main():
             st.success("This time series is not classified as fraud.")
     with tab2:
         st.title("Reconstruction Results")
-        col1, col2 =  st.columns(2, gap='medium')
+        col1, col2 =  st.columns(2)
         with col1:
             # Display the sample of 3000 time series before reconstruction
             st.subheader("Before Reconstruction")
