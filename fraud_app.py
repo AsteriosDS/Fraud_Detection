@@ -22,8 +22,8 @@ def main():
 
     # Display micrographs of time series data in a 5x20 grid
     st.subheader("Micrographs of Time Series")
-    num_rows = 5
-    num_cols = 20
+    num_rows = 10
+    num_cols = 10
     num_plots = num_rows * num_cols
     fig, axes = plt.subplots(num_rows, num_cols, figsize=(20, 10))
     
