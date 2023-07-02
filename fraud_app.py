@@ -21,7 +21,7 @@ def main():
     st.write("Explore time series data and classify them using the autoencoder model.")
 
     # Create a grid layout with two columns
-    col1, col2 = st.columns(2,[0.6,0.4]), gap="medium")
+    col1, col2 = st.columns(2, gap="medium")
 
     with col1:
         # Display micrographs of time series data in a 5x20 grid
