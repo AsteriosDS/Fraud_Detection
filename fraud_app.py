@@ -21,7 +21,7 @@ def main():
     st.write("Explore time series data and classify them using the autoencoder model.")
 
     # Create a grid layout with two columns
-    col1, col2 = st.columns(2, gap="large")
+    col1, col2 = st.columns([0.7,0.3], gap="large")
 
     with col1:
         # Display micrographs of time series data in a y times z grid
@@ -29,7 +29,7 @@ def main():
         num_rows = 10
         num_cols = 10
         num_plots = num_rows * num_cols
-        fig, axes = plt.subplots(num_rows, num_cols, figsize=(45, 30))
+        fig, axes = plt.subplots(num_rows, num_cols, figsize=(20, 10))
         
         for i, row in enumerate(test_data.iterrows()):
             if i >= num_plots:
