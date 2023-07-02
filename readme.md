@@ -3,8 +3,8 @@
 ### This was built with the dataset from MACHINE LEARNING GROUP - ULB [click here](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud).
 ---
 ## Interactive dashboard: [click here](https://fraudz.streamlit.app/)
----
-### 1. Used 2/3 of non frauds for train/test and remaining for validation.
+
+### 1. Used 2/3 of non frauds for train/test and remaining of both classes for validation.
 ### 2. Autoencoder optimized with Optuna towards minimization of mse.
 ### 3. Optimized the threshold value K in [initial_threshold,1] where initial threshold is np.mean(reconstruction_errors) + np.std(reconstruction_errors)
 
