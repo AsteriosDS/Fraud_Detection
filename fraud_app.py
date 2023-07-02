@@ -22,12 +22,12 @@ def main():
 
     # Display micrographs of time series data
     st.subheader("Micrographs of Time Series")
-    for i, row in samples.iterrows():
+    for i, row in test_data.iterrows():
         st.line_chart(row)
 
     # Classification functionality
-    selected_timeseries = st.selectbox("Select a time series to classify", samples.index)
-    selected_data = samples.loc[selected_timeseries]
+    selected_timeseries = st.selectbox("Select a time series to classify", test_data.index)
+    selected_data = test_data.loc[selected_timeseries]
     reconstructed = model.predict(np.array([selected_data]))[0]
     reconstruction_error = np.mean(np.abs(selected_data - reconstructed))
     st.subheader("Reconstructed Time Series")
