@@ -72,10 +72,10 @@ def main():
         plt.legend(handles=handles, loc='upper right')
         st.pyplot(plt)
         
-    if reconstruction_error > 0.05:
-        st.warning("This time series is classified as fraud.")
-    else:
-        st.success("This time series is not classified as fraud.")
+        if reconstruction_error > 0.05:
+            st.warning("This time series is classified as fraud.")
+        else:
+            st.success("This time series is not classified as fraud.")
 
 if __name__ == "__main__":
     main()
