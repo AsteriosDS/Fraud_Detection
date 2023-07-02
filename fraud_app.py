@@ -1,12 +1,16 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
+import os
 from tensorflow.keras.models import load_model
 import matplotlib.pyplot as plt
 
+# define path
+path = os.path.dirname(__file__)
+
 # Load the saved autoencoder model
-model = load_model("autoencoder_model.h5")
-model.load_weights("autoencoder_weights.h5")
+model = load_model(path + "/autoencoder_model.h5")
+model.load_weights(path + "/autoencoder_weights.h5")
 
 # Streamlit app
 def main():
