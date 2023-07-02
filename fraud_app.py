@@ -47,9 +47,16 @@ def main():
     selected_data = test_data.loc[selected_timeseries]
     reconstructed = model.predict(np.array([selected_data]))[0]
     reconstruction_error = np.mean(np.abs(selected_data - reconstructed))
-    st.subheader("Reconstructed Time Series")
-    st.line_chart(reconstructed)
-
+    
+    st.subheader("Time Series Comparison")
+    plt.figure(figsize=(10, 6))
+    plt.plot(selected_data, label="Original")
+    plt.plot(reconstructed, label="Reconstructed")
+    plt.xlabel("Time")
+    plt.ylabel("Value")
+    plt.legend()
+    st.pyplot(plt)
+    
     if reconstruction_error > 0.05:
         st.warning("This time series is classified as fraud.")
     else:
