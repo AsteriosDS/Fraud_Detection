@@ -70,7 +70,7 @@ def main():
         # Add legends
         handles, labels = plt.gca().get_legend_handles_labels()
         handles.extend([
-            plt.Line2D([], [], color='green', alpha=0.5, label='Reconstructed >= Original'),
+            plt.Line2D([], [], color='green', alpha=0.5, label='Reconstructed > Original'),
             plt.Line2D([], [], color='red', alpha=0.5, label='Reconstructed < Original')
         ])
         plt.legend(handles=handles, loc='upper right')
