@@ -82,13 +82,15 @@ def main():
             st.success("This time series is not classified as fraud.")
     with tab2:
         st.title("Reconstruction Results")
-        # Display the sample of 3000 time series before reconstruction
-        st.subheader("Before Reconstruction")
-        st.image(path + "/b4.jpg", use_column_width=True)
-    
-        # Display the sample of 3000 time series after reconstruction
-        st.subheader("After Reconstruction")
-        st.image(path + "/afterr.jpg", use_column_width=True)
+        col1, col2 =  st.columns(2, gap='medium')
+        with col1:
+            # Display the sample of 3000 time series before reconstruction
+            st.subheader("Before Reconstruction")
+            st.image(path + "/b4.jpg", use_column_width=True)
+        with col2:
+            # Display the sample of 3000 time series after reconstruction
+            st.subheader("After Reconstruction")
+            st.image(path + "/afterr.jpg", use_column_width=True)
 
 if __name__ == "__main__":
     main()
