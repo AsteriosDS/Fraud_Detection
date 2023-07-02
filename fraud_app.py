@@ -52,6 +52,8 @@ def main():
     plt.figure(figsize=(10, 6))
     plt.plot(selected_data, label="Original")
     plt.plot(reconstructed, label="Reconstructed")
+    plt.fill_between(range(len(selected_data)), selected_data, reconstructed, where=(reconstructed >= selected_data), interpolate=True, color='green', alpha=0.5)
+    plt.fill_between(range(len(selected_data)), selected_data, reconstructed, where=(reconstructed < selected_data), interpolate=True, color='red', alpha=0.5)
     plt.xlabel("Time")
     plt.ylabel("Value")
     plt.legend()
