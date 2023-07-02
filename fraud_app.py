@@ -54,9 +54,13 @@ def main():
     plt.plot(reconstructed, label="Reconstructed")
     plt.fill_between(range(len(selected_data)), selected_data, reconstructed, where=(reconstructed >= selected_data), interpolate=True, color='green', alpha=0.5)
     plt.fill_between(range(len(selected_data)), selected_data, reconstructed, where=(reconstructed < selected_data), interpolate=True, color='red', alpha=0.5)
-    plt.xlabel("Time")
+    plt.xlabel("Features")
     plt.ylabel("Value")
     plt.legend()
+    plt.legend(handles=[
+    plt.Line2D([], [], color='green', alpha=0.5, label='Reconstructed >= Original'),
+    plt.Line2D([], [], color='red', alpha=0.5, label='Reconstructed < Original')
+    ])
     st.pyplot(plt)
     
     if reconstruction_error > 0.05:
