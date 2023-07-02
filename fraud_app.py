@@ -82,11 +82,11 @@ def main():
         st.title("Reconstruction Results")
         # Display the sample of 3000 time series before reconstruction
         st.subheader("Before Reconstruction")
-        st.image(path + "/b4.png", use_column_width=True)
+        st.image(path + "/b4.jpg", use_column_width=True)
     
         # Display the sample of 3000 time series after reconstruction
         st.subheader("After Reconstruction")
-        st.image(path + "/afterr.png", use_column_width=True)
+        st.image(path + "/afterr.jpg", use_column_width=True)
 
 if __name__ == "__main__":
     main()
