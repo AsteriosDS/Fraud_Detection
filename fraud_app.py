@@ -21,7 +21,7 @@ def main():
     st.write("Explore time series data and classify them using the autoencoder model.")
 
     # Create a grid layout with two columns
-    col1, col2 = st.columns([0.6,0.4], gap="large")
+    col1, col2, col3, col4 = st.columns(4, gap="large")
 
     with col1:
         # Display micrographs of time series data in a y times z grid
@@ -48,7 +48,6 @@ def main():
 
     with col2:
         # Classification functionality
-        selected_timeseries = st.selectbox("Select a time series to classify", test_data.index)
         selected_data = test_data.loc[selected_timeseries]
         reconstructed = model.predict(np.array([selected_data]))[0]
         reconstruction_error = np.mean(np.abs(selected_data - reconstructed))
@@ -72,6 +71,10 @@ def main():
         plt.legend(handles=handles, loc='upper right')
         st.pyplot(plt)
         
+    with col3:
+        selected_timeseries = st.selectbox("Select a time series to classify", test_data.index)
+        
+    with col4:
         if reconstruction_error > 0.05:
             st.warning("This time series is classified as fraud.")
         else:
