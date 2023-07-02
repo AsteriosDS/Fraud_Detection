@@ -41,7 +41,7 @@ def main():
         components.html(f"<p id='{component_id}'>{row[1]}</p>", height=200)
 
         # Get the selected time series on click
-        selected_timeseries = st.get_query_params().get(component_id)
+        selected_timeseries = st.experimental_get_query_params().get(component_id)
         if selected_timeseries:
             selected_data = test_data.loc[int(selected_timeseries)]
             reconstructed = model.predict(np.array([selected_data]))[0]
