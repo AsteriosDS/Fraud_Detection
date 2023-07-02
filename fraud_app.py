@@ -29,7 +29,7 @@ def main():
         num_rows = 10
         num_cols = 10
         num_plots = num_rows * num_cols
-        fig, axes = plt.subplots(num_rows, num_cols, figsize=(20, 10))
+        fig, axes = plt.subplots(num_rows, num_cols, figsize=(30, 20))
         
         for i, row in enumerate(test_data.iterrows()):
             if i >= num_plots:
