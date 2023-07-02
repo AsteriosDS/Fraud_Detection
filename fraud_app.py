@@ -43,7 +43,7 @@ def main():
             ax.set_title(f"Sample {i+1}")
             ax.axis("off")
         
-        plt.tight_layout()
+        plt.tight_layout(pad=2.5)
         st.pyplot(fig)
 
     with col2:
