@@ -26,8 +26,8 @@ def main():
     with col1:
         # Display micrographs of time series data in a 5x20 grid
         st.subheader("Micrographs of Time Series")
-        num_rows = 20
-        num_cols = 5
+        num_rows = 10
+        num_cols = 10
         num_plots = num_rows * num_cols
         fig, axes = plt.subplots(num_rows, num_cols, figsize=(20, 10))
         
@@ -53,7 +53,7 @@ def main():
         reconstructed = model.predict(np.array([selected_data]))[0]
         reconstruction_error = np.mean(np.abs(selected_data - reconstructed))
         
-        st.subheader("Time Series Comparison")
+        st.subheader('Original vs Reconstructed Time Series')
         plt.figure(figsize=(10, 6))
         plt.plot(selected_data, label="Original")
         plt.plot(reconstructed, label="Reconstructed")
@@ -61,6 +61,7 @@ def main():
         plt.fill_between(range(len(selected_data)), selected_data, reconstructed, where=(reconstructed < selected_data), interpolate=True, color='red', alpha=0.5)
         plt.xlabel("Features")
         plt.ylabel("Value")
+        plt.tight_layout(pad=2.5)
         
         # Add legends
         handles, labels = plt.gca().get_legend_handles_labels()
