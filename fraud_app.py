@@ -44,7 +44,7 @@ def main():
             ax = axes[row_index, col_index]
             
             ax.plot(row[1])
-            ax.set_title(f"Sample {i+1}")
+            ax.set_title(f"Sample {i}")
             ax.axis("off")
         
         plt.tight_layout(pad=2.5)
