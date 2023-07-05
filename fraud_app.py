@@ -77,9 +77,9 @@ def main():
         st.pyplot(plt)
         
         if reconstruction_error > 0.05:
-            st.warning("This time series is classified as fraud.")
+            st.warning("This transaction is classified as fraud.")
         else:
-            st.success("This time series is not classified as fraud.")
+            st.success("This transaction is not classified as fraud.")
     with tab2:
         st.title("Reconstruction Results")
         col1, col2 =  st.columns(2)
