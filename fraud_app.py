@@ -22,7 +22,7 @@ def main():
     tab1, tab2 = st.tabs(["Fraud Detection Autoencoder", "Reconstruction Results"])
     with tab1:
         st.title("Fraud Detection Autoencoder")
-        st.write("Explore time series data and classify them using the autoencoder model.")
+        st.write("Explore credid card transaction data and classify them using the autoencoder model.")
     
         # # Create a grid layout with two columns
         # col1, col2 = st.columns((1,1), gap="large")
@@ -52,12 +52,12 @@ def main():
     
         # with col2:
         # Classification functionality
-        selected_timeseries = st.selectbox("Select a time series to classify", test_data.index)
+        selected_timeseries = st.selectbox("Select a transaction to classify", test_data.index)
         selected_data = test_data.loc[selected_timeseries]
         reconstructed = model.predict(np.array([selected_data]))[0]
         reconstruction_error = np.mean(np.abs(selected_data - reconstructed))
         
-        st.subheader('Original vs Reconstructed Time Series')
+        st.subheader('Original vs Reconstructed Transaction Data')
         plt.figure(figsize=(10, 6))
         plt.plot(selected_data, label="Original")
         plt.plot(reconstructed, label="Reconstructed")
