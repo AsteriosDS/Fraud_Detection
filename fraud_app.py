@@ -28,8 +28,8 @@ def main():
         # col1, col2 = st.columns((1,1), gap="large")
     
         # with col1:
-        # Display micrographs of time series data in a y times z grid
-        st.subheader("Micrographs of Time Series")
+        # Display micrographs of transaction data in a y times z grid
+        st.subheader("Micrographs of Transaction Data")
         num_rows = 10
         num_cols = 10
         num_plots = num_rows * num_cols
