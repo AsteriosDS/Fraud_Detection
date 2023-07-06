@@ -2,7 +2,7 @@
 ---
 ### This was built with the dataset from MACHINE LEARNING GROUP - ULB [click here](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud).
 ---
-## Interactive dashboard: [click here](https://fraudzzzdetection.streamlit.app/)
+## Interactive dashboard: [click here](https://frauddetection-69.streamlit.app/)
 
 ### 1. Used 2/3 of non frauds for train/test and remaining of both classes for validation.
 ### 2. Autoencoder optimized with Optuna towards minimization of mse.
