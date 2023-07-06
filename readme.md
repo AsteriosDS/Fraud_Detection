@@ -13,6 +13,6 @@
 #### 2. *afterr.jpg*: jpg with the reconstruction results of a sample from the dataset.
 #### 3. *autoencoder.h5*,*auto_weights.h5*: Autoencoder network and its weights.
 #### 4. *b4.jpg*: jpg of a sample from the dataset before reconstruction.
-#### 5. *fraud_app.py*: Python file for the streamlit app.
+#### 5. *fraud_detection_app.py*: Python file for the streamlit app.
 #### 6. *requirements.txt*: Requirements for the streamlit vm.
 #### 7. *val_st.csv*: csv with a sample from the validation set, used in the streamlit app.
